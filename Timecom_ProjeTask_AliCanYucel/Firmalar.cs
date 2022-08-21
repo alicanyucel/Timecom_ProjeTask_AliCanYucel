@@ -81,5 +81,15 @@ namespace Timecom_ProjeTask_AliCanYucel
         {
 
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
