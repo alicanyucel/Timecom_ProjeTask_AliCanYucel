@@ -35,11 +35,12 @@
             this.btnSil = new System.Windows.Forms.Button();
             this.btnGeriGel = new System.Windows.Forms.Button();
             this.btnHesaplamayaGit = new System.Windows.Forms.Button();
+            this.btnAnaSayfa = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnPersonelAra
             // 
-            this.btnPersonelAra.Location = new System.Drawing.Point(44, 387);
+            this.btnPersonelAra.Location = new System.Drawing.Point(114, 387);
             this.btnPersonelAra.Name = "btnPersonelAra";
             this.btnPersonelAra.Size = new System.Drawing.Size(75, 23);
             this.btnPersonelAra.TabIndex = 0;
@@ -48,7 +49,7 @@
             // 
             // btnPersonelDuzenle
             // 
-            this.btnPersonelDuzenle.Location = new System.Drawing.Point(269, 387);
+            this.btnPersonelDuzenle.Location = new System.Drawing.Point(321, 387);
             this.btnPersonelDuzenle.Name = "btnPersonelDuzenle";
             this.btnPersonelDuzenle.Size = new System.Drawing.Size(117, 23);
             this.btnPersonelDuzenle.TabIndex = 1;
@@ -57,7 +58,7 @@
             // 
             // btnYeniKayit
             // 
-            this.btnYeniKayit.Location = new System.Drawing.Point(152, 387);
+            this.btnYeniKayit.Location = new System.Drawing.Point(209, 387);
             this.btnYeniKayit.Name = "btnYeniKayit";
             this.btnYeniKayit.Size = new System.Drawing.Size(75, 23);
             this.btnYeniKayit.TabIndex = 2;
@@ -66,7 +67,7 @@
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(423, 387);
+            this.btnSil.Location = new System.Drawing.Point(462, 387);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(75, 23);
             this.btnSil.TabIndex = 3;
@@ -75,7 +76,7 @@
             // 
             // btnGeriGel
             // 
-            this.btnGeriGel.Location = new System.Drawing.Point(542, 387);
+            this.btnGeriGel.Location = new System.Drawing.Point(597, 387);
             this.btnGeriGel.Name = "btnGeriGel";
             this.btnGeriGel.Size = new System.Drawing.Size(75, 23);
             this.btnGeriGel.TabIndex = 4;
@@ -85,7 +86,7 @@
             // 
             // btnHesaplamayaGit
             // 
-            this.btnHesaplamayaGit.Location = new System.Drawing.Point(649, 387);
+            this.btnHesaplamayaGit.Location = new System.Drawing.Point(743, 387);
             this.btnHesaplamayaGit.Name = "btnHesaplamayaGit";
             this.btnHesaplamayaGit.Size = new System.Drawing.Size(114, 23);
             this.btnHesaplamayaGit.TabIndex = 5;
@@ -93,13 +94,24 @@
             this.btnHesaplamayaGit.UseVisualStyleBackColor = true;
             this.btnHesaplamayaGit.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnAnaSayfa
+            // 
+            this.btnAnaSayfa.Location = new System.Drawing.Point(13, 387);
+            this.btnAnaSayfa.Name = "btnAnaSayfa";
+            this.btnAnaSayfa.Size = new System.Drawing.Size(75, 23);
+            this.btnAnaSayfa.TabIndex = 6;
+            this.btnAnaSayfa.Text = "Ana Sayfa";
+            this.btnAnaSayfa.UseVisualStyleBackColor = true;
+            this.btnAnaSayfa.Click += new System.EventHandler(this.btnAnaSayfa_Click);
+            // 
             // Personeller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(934, 450);
+            this.Controls.Add(this.btnAnaSayfa);
             this.Controls.Add(this.btnHesaplamayaGit);
             this.Controls.Add(this.btnGeriGel);
             this.Controls.Add(this.btnSil);
@@ -120,5 +132,6 @@
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnGeriGel;
         private System.Windows.Forms.Button btnHesaplamayaGit;
+        private System.Windows.Forms.Button btnAnaSayfa;
     }
 }

@@ -33,5 +33,12 @@ namespace Timecom_ProjeTask_AliCanYucel
         {
 
         }
+
+        private void btnAnaSayfa_Click(object sender, EventArgs e)
+        {
+            Firmalar firmalar = new Firmalar();
+            firmalar.Show();
+            this.Hide();
+        }
     }
 }

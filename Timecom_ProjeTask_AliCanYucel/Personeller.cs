@@ -30,5 +30,13 @@ namespace Timecom_ProjeTask_AliCanYucel
             hesaplamalar.Show();
             this.Hide();
         }
+
+        private void btnAnaSayfa_Click(object sender, EventArgs e)
+        {
+            Firmalar frm = new Firmalar();
+            frm.Show();
+            this.Hide();
+
+        }
     }
 }

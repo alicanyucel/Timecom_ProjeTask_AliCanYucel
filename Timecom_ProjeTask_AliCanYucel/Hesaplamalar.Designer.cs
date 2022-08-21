@@ -34,6 +34,7 @@
             this.btnMaasHesaplat = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnGeri = new System.Windows.Forms.Button();
+            this.btnAnaSayfa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgHesaplamalar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +48,7 @@
             // 
             // btnPersonelGetir
             // 
-            this.btnPersonelGetir.Location = new System.Drawing.Point(45, 383);
+            this.btnPersonelGetir.Location = new System.Drawing.Point(117, 383);
             this.btnPersonelGetir.Name = "btnPersonelGetir";
             this.btnPersonelGetir.Size = new System.Drawing.Size(116, 23);
             this.btnPersonelGetir.TabIndex = 1;
@@ -56,7 +57,7 @@
             // 
             // btnMaasHesaplat
             // 
-            this.btnMaasHesaplat.Location = new System.Drawing.Point(227, 383);
+            this.btnMaasHesaplat.Location = new System.Drawing.Point(263, 383);
             this.btnMaasHesaplat.Name = "btnMaasHesaplat";
             this.btnMaasHesaplat.Size = new System.Drawing.Size(101, 23);
             this.btnMaasHesaplat.TabIndex = 2;
@@ -83,6 +84,16 @@
             this.btnGeri.UseVisualStyleBackColor = true;
             this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
+            // btnAnaSayfa
+            // 
+            this.btnAnaSayfa.Location = new System.Drawing.Point(21, 383);
+            this.btnAnaSayfa.Name = "btnAnaSayfa";
+            this.btnAnaSayfa.Size = new System.Drawing.Size(75, 23);
+            this.btnAnaSayfa.TabIndex = 5;
+            this.btnAnaSayfa.Text = "AnaSayfa";
+            this.btnAnaSayfa.UseVisualStyleBackColor = true;
+            this.btnAnaSayfa.Click += new System.EventHandler(this.btnAnaSayfa_Click);
+            // 
             // Hesaplamalar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -90,6 +101,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAnaSayfa);
             this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnMaasHesaplat);
@@ -110,5 +122,6 @@
         private System.Windows.Forms.Button btnMaasHesaplat;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnGeri;
+        private System.Windows.Forms.Button btnAnaSayfa;
     }
 }
