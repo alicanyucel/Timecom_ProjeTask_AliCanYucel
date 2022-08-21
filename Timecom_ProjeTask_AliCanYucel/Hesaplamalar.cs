@@ -16,5 +16,12 @@ namespace Timecom_ProjeTask_AliCanYucel
         {
             InitializeComponent();
         }
+
+        private void btnGeri_Click(object sender, EventArgs e)
+        {
+            Personeller personeller = new Personeller();
+            personeller.Show();
+            this.Hide();
+        }
     }
 }

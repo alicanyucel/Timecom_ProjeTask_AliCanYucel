@@ -16,7 +16,7 @@ namespace Timecom_ProjeTask_AliCanYucel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Firmalar());
+            Application.Run(new Hesaplamalar());
         }
     }
 }
