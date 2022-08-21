@@ -16,5 +16,10 @@ namespace Timecom_ProjeTask_AliCanYucel
         {
             InitializeComponent();
         }
+
+        private void Firmalar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
