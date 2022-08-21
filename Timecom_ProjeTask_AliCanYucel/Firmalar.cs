@@ -91,5 +91,11 @@ namespace Timecom_ProjeTask_AliCanYucel
         {
 
         }
+
+        private void chckbxFirmalar_CheckedChanged(object sender, EventArgs e)
+        {
+            Personeller prsn = new Personeller();
+            prsn.Show();
+        }
     }
 }

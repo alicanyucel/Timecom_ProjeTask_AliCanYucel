@@ -71,6 +71,7 @@
             this.btnSil.TabIndex = 3;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGeri
             // 
@@ -96,6 +97,7 @@
             this.Controls.Add(this.dtgHesaplamalar);
             this.Name = "Hesaplamalar";
             this.Text = "Timecom Hesaplamalar";
+            this.Load += new System.EventHandler(this.Hesaplamalar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgHesaplamalar)).EndInit();
             this.ResumeLayout(false);
 

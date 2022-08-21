@@ -16,5 +16,19 @@ namespace Timecom_ProjeTask_AliCanYucel
         {
             InitializeComponent();
         }
+
+        private void btnGeriGel_Click(object sender, EventArgs e)
+        {
+            Firmalar frm = new Firmalar();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Hesaplamalar hesaplamalar = new Hesaplamalar();
+            hesaplamalar.Show();
+            this.Hide();
+        }
     }
 }

@@ -983,6 +983,7 @@
             this.chckbxFirmalar.Size = new System.Drawing.Size(15, 14);
             this.chckbxFirmalar.TabIndex = 89;
             this.chckbxFirmalar.UseVisualStyleBackColor = true;
+            this.chckbxFirmalar.CheckedChanged += new System.EventHandler(this.chckbxFirmalar_CheckedChanged);
             // 
             // label39
             // 
@@ -1358,7 +1359,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1025, 749);
+            this.ClientSize = new System.Drawing.Size(1165, 749);
             this.Controls.Add(this.lblPersonelSayisi);
             this.Controls.Add(this.dtgFirmalar);
             this.Controls.Add(this.button32);

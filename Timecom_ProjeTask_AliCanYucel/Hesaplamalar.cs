@@ -23,5 +23,15 @@ namespace Timecom_ProjeTask_AliCanYucel
             personeller.Show();
             this.Hide();
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Hesaplamalar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
