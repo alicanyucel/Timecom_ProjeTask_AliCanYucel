@@ -38,5 +38,10 @@ namespace Timecom_ProjeTask_AliCanYucel
             this.Hide();
 
         }
+
+        private void btnYeniKayit_Click(object sender, EventArgs e)
+        {
+            // Kayıtlar Eklenecek
+        }
     }
 }

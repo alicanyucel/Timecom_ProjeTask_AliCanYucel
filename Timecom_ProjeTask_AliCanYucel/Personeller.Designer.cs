@@ -84,6 +84,7 @@
             this.btnYeniKayit.TabIndex = 2;
             this.btnYeniKayit.Text = "Yeni Kayit";
             this.btnYeniKayit.UseVisualStyleBackColor = true;
+            this.btnYeniKayit.Click += new System.EventHandler(this.btnYeniKayit_Click);
             // 
             // btnSil
             // 
