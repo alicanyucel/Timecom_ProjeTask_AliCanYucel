@@ -203,16 +203,47 @@ namespace Timecom_ProjeTask_AliCanYucel
             }
     }
 
-        private void btnDuzenle_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button33_Click_1(object sender, EventArgs e)
         {
             txtFirmaKodu.Text = "";
             txtFirmaAdiSoyadi.Text = "";
            
+        }
+
+        private void btnDuzenle_Click(object sender, EventArgs e)
+        {
+            string id = txtFirmaId.Text;
+            string firmaisim,firmakodu;
+            firmaisim = txtFirmaAdiSoyadi.Text;
+            firmakodu = txtFirmaKodu.Text;
+            if (firmakodu != "")
+            {
+                string sql = "UPDATE Firmalar set " +
+                 "FirmaAdi='" + firmaisim+ "', FirmaKodu='" +firmakodu + "' WHERE FirmaId=" + id;
+                SQLCalistir(sql, "Düzeltme");
+                verileriGetir();
+            }
+            else
+            {
+                MessageBox.Show("Lütfen düzeltilecek kaydı seçiniz");
+
+            }
+        }
+
+        private void dtgFirmalar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dtgFirmalar_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            int secilenIndeks = dtgFirmalar.SelectedCells[0].RowIndex;
+            DataGridViewRow secilenSatir = dtgFirmalar.Rows[secilenIndeks];
+            txtFirmaKodu.Text = Convert.ToString(secilenSatir.Cells["FirmaKodu"].Value);
+            txtFirmaAdiSoyadi.Text = Convert.ToString(secilenSatir.Cells["FirmaAdi"].Value);
+            
+
         }
     }
     }
