@@ -156,6 +156,8 @@
             this.button32 = new System.Windows.Forms.Button();
             this.dtgFirmalar = new System.Windows.Forms.DataGridView();
             this.lblPersonelSayisi = new System.Windows.Forms.Label();
+            this.btnListele = new System.Windows.Forms.Button();
+            this.button33 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -180,6 +182,7 @@
             this.btnDuzenle.TabIndex = 1;
             this.btnDuzenle.Text = "Düzenle";
             this.btnDuzenle.UseVisualStyleBackColor = true;
+            this.btnDuzenle.Click += new System.EventHandler(this.btnDuzenle_Click);
             // 
             // btnSil
             // 
@@ -189,6 +192,7 @@
             this.btnSil.TabIndex = 2;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // label1
             // 
@@ -613,7 +617,7 @@
             // 
             // btnCikis
             // 
-            this.btnCikis.Location = new System.Drawing.Point(339, 5);
+            this.btnCikis.Location = new System.Drawing.Point(521, 5);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(75, 23);
             this.btnCikis.TabIndex = 49;
@@ -1353,6 +1357,26 @@
             this.lblPersonelSayisi.TabIndex = 143;
             this.lblPersonelSayisi.Text = "Personel Sayisi:";
             // 
+            // btnListele
+            // 
+            this.btnListele.Location = new System.Drawing.Point(350, 4);
+            this.btnListele.Name = "btnListele";
+            this.btnListele.Size = new System.Drawing.Size(75, 23);
+            this.btnListele.TabIndex = 144;
+            this.btnListele.Text = "Listele";
+            this.btnListele.UseVisualStyleBackColor = true;
+            this.btnListele.Click += new System.EventHandler(this.button33_Click);
+            // 
+            // button33
+            // 
+            this.button33.Location = new System.Drawing.Point(431, 5);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(75, 23);
+            this.button33.TabIndex = 145;
+            this.button33.Text = "Temizle";
+            this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.button33_Click_1);
+            // 
             // Firmalar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1360,6 +1384,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1165, 749);
+            this.Controls.Add(this.button33);
+            this.Controls.Add(this.btnListele);
             this.Controls.Add(this.lblPersonelSayisi);
             this.Controls.Add(this.dtgFirmalar);
             this.Controls.Add(this.button32);
@@ -1625,6 +1651,8 @@
         private System.Windows.Forms.Button button32;
         private System.Windows.Forms.DataGridView dtgFirmalar;
         private System.Windows.Forms.Label lblPersonelSayisi;
+        private System.Windows.Forms.Button btnListele;
+        private System.Windows.Forms.Button button33;
     }
 }
 
