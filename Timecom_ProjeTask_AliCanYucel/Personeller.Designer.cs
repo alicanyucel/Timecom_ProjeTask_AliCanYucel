@@ -57,6 +57,7 @@
             this.cbxCalismaSekli = new System.Windows.Forms.ComboBox();
             this.cbxUcreti = new System.Windows.Forms.ComboBox();
             this.dtgPersoneller = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPersoneller)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +69,7 @@
             this.btnPersonelAra.TabIndex = 0;
             this.btnPersonelAra.Text = "Personel Ara";
             this.btnPersonelAra.UseVisualStyleBackColor = true;
+            this.btnPersonelAra.Click += new System.EventHandler(this.btnPersonelAra_Click);
             // 
             // btnPersonelDuzenle
             // 
@@ -77,6 +79,7 @@
             this.btnPersonelDuzenle.TabIndex = 1;
             this.btnPersonelDuzenle.Text = "Personel Düzenle";
             this.btnPersonelDuzenle.UseVisualStyleBackColor = true;
+            this.btnPersonelDuzenle.Click += new System.EventHandler(this.btnPersonelDuzenle_Click);
             // 
             // btnYeniKayit
             // 
@@ -292,6 +295,15 @@
             this.dtgPersoneller.Size = new System.Drawing.Size(1067, 335);
             this.dtgPersoneller.TabIndex = 26;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(7, 13);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(57, 13);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "PersonelId";
+            // 
             // Personeller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,6 +311,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(934, 450);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.dtgPersoneller);
             this.Controls.Add(this.cbxUcreti);
             this.Controls.Add(this.cbxCalismaSekli);
@@ -363,5 +376,6 @@
         private System.Windows.Forms.ComboBox cbxCalismaSekli;
         private System.Windows.Forms.ComboBox cbxUcreti;
         private System.Windows.Forms.DataGridView dtgPersoneller;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -157,5 +157,42 @@ namespace Timecom_ProjeTask_AliCanYucel
                 verileriGetir();
             }
         }
+
+        private void btnPersonelAra_Click(object sender, EventArgs e)
+        {
+           
+            SqlConnection connections = new SqlConnection("Data Source=DESKTOP-ROTCU0Q;Initial Catalog=Timecom;Integrated Security=True");
+            if (connections.State == ConnectionState.Closed)
+            {
+                connections.Open();
+            }
+            SqlCommand ara = new SqlCommand("select * from Personeller where adi like'%" + txtPersonelAd.Text + "%'", connections);
+            SqlDataAdapter da = new SqlDataAdapter(ara);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dtgPersoneller.DataSource = ds.Tables[0];
+            connections.Close();
+ 
+        }
+
+        private void btnPersonelDuzenle_Click(object sender, EventArgs e)
+        {
+            string id = txtFirmaId.Text;
+            string , firmakodu;
+            firmaisim = txtFirmaAdiSoyadi.Text;
+            firmakodu = txtFirmaKodu.Text;
+            if (firmakodu != "")
+            {
+                string sql = "UPDATE Personeller set " +
+                 "FirmaAdi='" + firmaisim + "', FirmaKodu='" + firmakodu + "' WHERE FirmaId=" + id;
+                SQLCalistir(sql, "Düzeltme");
+                verileriGetir();
+            }
+            else
+            {
+                MessageBox.Show("Lütfen düzeltilecek kaydı seçiniz");
+
+            }
+        }
     }
 }
