@@ -181,6 +181,7 @@ namespace Timecom_ProjeTask_AliCanYucel
         {
             Personeller prsn = new Personeller();
             prsn.Show();
+            this.Hide();
         }
 
         private void button33_Click(object sender, EventArgs e)
