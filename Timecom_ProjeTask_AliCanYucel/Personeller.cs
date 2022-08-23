@@ -131,7 +131,6 @@ namespace Timecom_ProjeTask_AliCanYucel
         private void Personeller_Load(object sender, EventArgs e)
         {
             this.dtgPersoneller.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            // combobox int turunden değer dönüyor gelen veriyi int bir değişkende karşılamalıyız
             // net maas hesapları yapılacak
             cbxEngellilikDurumu.Items.Add("normal");
             cbxEngellilikDurumu.Items.Add("1.Derece Engelli");
@@ -153,10 +152,8 @@ namespace Timecom_ProjeTask_AliCanYucel
                 int secilenIndeks = dtgPersoneller.SelectedCells[0].RowIndex;
                 DataGridViewRow secilenSatir = dtgPersoneller.Rows[secilenIndeks];
                 string silinecek = Convert.ToString(secilenSatir.Cells["PersonelId"].Value);
-
                 string sql = "DELETE FROM Personeller WHERE PersonelId=" + silinecek;
                 SQLCalistir(sql, "Silme");
-
                 verileriGetir();
             }
         }
