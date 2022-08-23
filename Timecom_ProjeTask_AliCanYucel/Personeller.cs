@@ -43,5 +43,24 @@ namespace Timecom_ProjeTask_AliCanYucel
         {
             // Kayıtlar Eklenecek
         }
+
+        private void cbxCinsiyet_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Personeller_Load(object sender, EventArgs e)
+        {
+            // combobox int turunden değer dönüyor gelen veriyi int bir değişkende karşılamalıyız
+            // net maas hesapları yapılacak
+            cbxEngellilikDurumu.Items.Add("normal");
+            cbxEngellilikDurumu.Items.Add("1.Derece Engelli");
+            cbxEngellilikDurumu.Items.Add("2.Derece Engelli");
+            cbxCinsiyet.Items.Add("erkek");
+            cbxCinsiyet.Items.Add("kadin");
+            cbxCalismaSekli.Items.Add("aylık");
+            cbxCalismaSekli.Items.Add("gunluk");
+            cbxCalismaSekli.Items.Add("saatlik");
+        }
     }
 }

@@ -247,6 +247,7 @@
             this.cbxCinsiyet.Name = "cbxCinsiyet";
             this.cbxCinsiyet.Size = new System.Drawing.Size(121, 21);
             this.cbxCinsiyet.TabIndex = 21;
+            this.cbxCinsiyet.SelectedIndexChanged += new System.EventHandler(this.cbxCinsiyet_SelectedIndexChanged);
             // 
             // txtIseBaslamaTarihi
             // 
@@ -314,6 +315,7 @@
             this.Controls.Add(this.btnPersonelAra);
             this.Name = "Personeller";
             this.Text = "Timecom Personeller";
+            this.Load += new System.EventHandler(this.Personeller_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
