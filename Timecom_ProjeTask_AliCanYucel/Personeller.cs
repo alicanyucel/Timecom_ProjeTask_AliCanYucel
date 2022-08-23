@@ -109,7 +109,7 @@ namespace Timecom_ProjeTask_AliCanYucel
                 isebaslama = txtIseBaslamaTarihi.Text;
                 engellilikdurumu = cbxEngellilikDurumu.SelectedItem.ToString();
                 calismasekli = cbxCalismaSekli.SelectedItem.ToString();
-                ucreti = cbxUcreti.SelectedItem.ToString();
+                ucreti =cbxUcreti.SelectedItem.ToString();
                 string sql = "INSERT INTO Personeller(PersonelKodu,Adi,Soyadi,TcNo,Cinsiyeti,IseBaslamaTarihi,EngellilikDurumu,CalismaSekli,Ucreti)" +
                      " VALUES('" + personelkodu + "','" + adi + "','" + soyadi + "','" + tcno + "','" + cinsiyeti + "','" + isebaslama + "','" + engellilikdurumu + "','" + calismasekli + "','" + ucreti + "')";
                 // MessageBox.Show(sql); 
@@ -140,8 +140,9 @@ namespace Timecom_ProjeTask_AliCanYucel
             cbxCalismaSekli.Items.Add("aylık");
             cbxCalismaSekli.Items.Add("gunluk");
             cbxCalismaSekli.Items.Add("saatlik");
-            cbxUcreti.Items.Add("2021"); // 2021 YILI İÇİN 4250 alacam
-            cbxUcreti.Items.Add("2022"); // 2022 YILI İÇİN 5500 alacam
+             // hesap yaparken inte çevir veri tabanına eklerken de kontrol et!
+            cbxUcreti.Items.Add("6500");  // hesap yaparken inte çevir veri tabanına eklerken de kontrol et!
+            cbxUcreti.Items.Add("7500");  // hesap yaparken inte çevir veri tabanına eklerken de kontrol et!
             verileriGetir();
         }
 

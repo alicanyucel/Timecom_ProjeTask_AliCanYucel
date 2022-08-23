@@ -96,10 +96,14 @@ namespace Timecom_ProjeTask_AliCanYucel
                     MessageBox.Show("Maas Tablosunda Silincek Verileriniz Yok");
                 verileriGetir();
             }
-        }
+        } 
+        // 
+       // maaslar tablosu doldurulacak veriler kullanıcıdan alınacak
 
         private void Hesaplamalar_Load(object sender, EventArgs e)
         {
+            
+           
 
         }
 
@@ -115,6 +119,11 @@ namespace Timecom_ProjeTask_AliCanYucel
             // iki ablonun tek gridde gozukmesi için personller ve maaşalr tablosu full joinle birleştirilecek
             verileriGetir();    
 
+        }
+
+        private void dtgHesaplamalar_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
         }
     }
 }

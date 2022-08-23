@@ -45,6 +45,7 @@
             this.dtgHesaplamalar.Name = "dtgHesaplamalar";
             this.dtgHesaplamalar.Size = new System.Drawing.Size(766, 301);
             this.dtgHesaplamalar.TabIndex = 0;
+            this.dtgHesaplamalar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgHesaplamalar_CellClick);
             // 
             // btnPersonelGetir
             // 
@@ -77,7 +78,7 @@
             // 
             // btnGeri
             // 
-            this.btnGeri.Location = new System.Drawing.Point(603, 383);
+            this.btnGeri.Location = new System.Drawing.Point(626, 383);
             this.btnGeri.Name = "btnGeri";
             this.btnGeri.Size = new System.Drawing.Size(75, 23);
             this.btnGeri.TabIndex = 4;
