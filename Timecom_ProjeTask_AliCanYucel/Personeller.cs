@@ -177,7 +177,30 @@ namespace Timecom_ProjeTask_AliCanYucel
 
         private void btnPersonelDuzenle_Click(object sender, EventArgs e)
         {
-           
+            string id =txtPersonelId.Text;
+            string personelkodu, adi, soyadi,tcno,cinsiyeti,isebaslamatarihi,engellilik,calismadurumu,ucretdonemi;
+            personelkodu = txtPersonelKodu.Text;
+            adi = txtPersonelAd.Text;
+            soyadi = txtPersonelSoyad.Text;
+            tcno = txtPersonelTcNo.Text;
+            cinsiyeti = cbxCinsiyet.SelectedItem.ToString();
+            isebaslamatarihi = (string)txtIseBaslamaTarihi.Text;
+            engellilik = cbxEngellilikDurumu.SelectedItem.ToString();
+            calismadurumu = cbxEngellilikDurumu.SelectedItem.ToString();
+            ucretdonemi = cbxUcreti.SelectedItem.ToString();
+                if (id != "")
+            {
+                string sql = "UPDATE Personeller set " +
+                 "PersonelKodu='" + personelkodu + "', Adi='" + adi + "',Soyadi='" + soyadi + "'," +
+                "TcNo='" + tcno  + "' WHERE PersonelId=" + id;
+                SQLCalistir(sql, "Düzeltme");
+                verileriGetir();
+            }
+            else
+            {
+                MessageBox.Show("Lütfen düzeltilecek kaydı seçiniz");
+
+            }
         }
 
         private void dtgPersoneller_CellContentClick(object sender, DataGridViewCellEventArgs e)
