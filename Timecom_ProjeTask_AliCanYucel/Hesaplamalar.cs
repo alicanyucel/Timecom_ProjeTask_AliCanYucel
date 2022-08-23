@@ -50,6 +50,23 @@ namespace Timecom_ProjeTask_AliCanYucel
         }
 
 
+        private void SQLCalistir(string sql, string islem)
+        {
+
+            veritabaniBaglan();
+
+            komut = new SqlCommand(sql, baglanti);
+            try
+            {
+                komut.ExecuteNonQuery();
+                MessageBox.Show(islem + " işlemi başarıyla gerçekleşti");
+            }
+            catch (SqlException hata)
+            {
+                MessageBox.Show(hata.Message.ToString());
+            }
+        }
+
         private void btnGeri_Click(object sender, EventArgs e)
         {
             Personeller personeller = new Personeller();
@@ -60,6 +77,25 @@ namespace Timecom_ProjeTask_AliCanYucel
         private void btnSil_Click(object sender, EventArgs e)
         {
 
+            if (dtgHesaplamalar.SelectedCells.Count > 0)
+            {
+                int secilenIndeks = dtgHesaplamalar.SelectedCells[0].RowIndex;
+                DataGridViewRow secilenSatir = dtgHesaplamalar.Rows[secilenIndeks];
+                string silinecekpersonel = Convert.ToString(secilenSatir.Cells["PersonelId"].Value);
+                string silinecekMaas = Convert.ToString(secilenSatir.Cells["MaasId"].Value);
+                //MessageBox.Show(silinecek);
+                string sqlpersonelsil = "DELETE FROM Personeller WHERE PersonelId=" + silinecekpersonel;
+                string maassil = "DELETE FROM Maaslar WHERE MaasId=" + silinecekMaas;
+                if (sqlpersonelsil != null)
+                    SQLCalistir(sqlpersonelsil, "Silme");
+                else
+                    MessageBox.Show("Silincek Personel Verileri Bulunamadi");
+                if(maassil!=null)
+                SQLCalistir(maassil, "silme");
+                else
+                    MessageBox.Show("Maas Tablosunda Silincek Verileriniz Yok");
+                verileriGetir();
+            }
         }
 
         private void Hesaplamalar_Load(object sender, EventArgs e)
