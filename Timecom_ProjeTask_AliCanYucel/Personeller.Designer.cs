@@ -58,6 +58,7 @@
             this.cbxUcreti = new System.Windows.Forms.ComboBox();
             this.dtgPersoneller = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
+            this.txtPersonelId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPersoneller)).BeginInit();
             this.SuspendLayout();
             // 
@@ -294,6 +295,8 @@
             this.dtgPersoneller.Name = "dtgPersoneller";
             this.dtgPersoneller.Size = new System.Drawing.Size(1067, 335);
             this.dtgPersoneller.TabIndex = 26;
+            this.dtgPersoneller.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPersoneller_CellClick);
+            this.dtgPersoneller.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPersoneller_CellContentClick);
             // 
             // label10
             // 
@@ -304,6 +307,13 @@
             this.label10.TabIndex = 27;
             this.label10.Text = "PersonelId";
             // 
+            // txtPersonelId
+            // 
+            this.txtPersonelId.Location = new System.Drawing.Point(89, 10);
+            this.txtPersonelId.Name = "txtPersonelId";
+            this.txtPersonelId.Size = new System.Drawing.Size(100, 20);
+            this.txtPersonelId.TabIndex = 28;
+            // 
             // Personeller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,6 +321,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(934, 450);
+            this.Controls.Add(this.txtPersonelId);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dtgPersoneller);
             this.Controls.Add(this.cbxUcreti);
@@ -377,5 +388,6 @@
         private System.Windows.Forms.ComboBox cbxUcreti;
         private System.Windows.Forms.DataGridView dtgPersoneller;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtPersonelId;
     }
 }

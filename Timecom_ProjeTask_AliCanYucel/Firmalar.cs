@@ -241,6 +241,7 @@ namespace Timecom_ProjeTask_AliCanYucel
             
             int secilenIndeks = dtgFirmalar.SelectedCells[0].RowIndex;
             DataGridViewRow secilenSatir = dtgFirmalar.Rows[secilenIndeks];
+            txtFirmaId.Text = Convert.ToString(secilenSatir.Cells["FirmaId"].Value);
             txtFirmaKodu.Text = Convert.ToString(secilenSatir.Cells["FirmaKodu"].Value);
             txtFirmaAdiSoyadi.Text = Convert.ToString(secilenSatir.Cells["FirmaAdi"].Value);
             

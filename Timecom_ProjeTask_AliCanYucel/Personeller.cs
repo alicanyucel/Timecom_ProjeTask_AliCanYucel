@@ -177,22 +177,28 @@ namespace Timecom_ProjeTask_AliCanYucel
 
         private void btnPersonelDuzenle_Click(object sender, EventArgs e)
         {
-            string id = txtFirmaId.Text;
-            string , firmakodu;
-            firmaisim = txtFirmaAdiSoyadi.Text;
-            firmakodu = txtFirmaKodu.Text;
-            if (firmakodu != "")
-            {
-                string sql = "UPDATE Personeller set " +
-                 "FirmaAdi='" + firmaisim + "', FirmaKodu='" + firmakodu + "' WHERE FirmaId=" + id;
-                SQLCalistir(sql, "Düzeltme");
-                verileriGetir();
-            }
-            else
-            {
-                MessageBox.Show("Lütfen düzeltilecek kaydı seçiniz");
+           
+        }
 
-            }
+        private void dtgPersoneller_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dtgPersoneller_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilenIndeks = dtgPersoneller.SelectedCells[0].RowIndex;
+            DataGridViewRow secilenSatir = dtgPersoneller.Rows[secilenIndeks];
+            txtPersonelId.Text = Convert.ToString(secilenSatir.Cells["PersonelId"].Value);
+            txtPersonelKodu.Text = Convert.ToString(secilenSatir.Cells["PersonelKodu"].Value);
+            txtPersonelAd.Text = Convert.ToString(secilenSatir.Cells["Adi"].Value);
+            txtPersonelSoyad.Text = Convert.ToString(secilenSatir.Cells["Soyadi"].Value);
+            txtPersonelTcNo.Text = Convert.ToString(secilenSatir.Cells["TcNo"].Value);
+            cbxCinsiyet.SelectedItem= Convert.ToString(secilenSatir.Cells["Cinsiyeti"].Value);
+            txtIseBaslamaTarihi.Text = Convert.ToString(secilenSatir.Cells["IseBaslamaTarihi"].Value);
+            cbxEngellilikDurumu.SelectedItem = Convert.ToString(secilenSatir.Cells["EngellilikDurumu"].Value);
+            cbxCalismaSekli.SelectedItem = Convert.ToString(secilenSatir.Cells["CalismaSekli"].Value);
+            cbxUcreti.SelectedItem =Convert.ToString(secilenSatir.Cells["Ucreti"].Value);
         }
     }
 }
