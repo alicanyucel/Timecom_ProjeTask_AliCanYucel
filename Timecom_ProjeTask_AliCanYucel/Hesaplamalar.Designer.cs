@@ -54,6 +54,7 @@
             this.btnPersonelGetir.TabIndex = 1;
             this.btnPersonelGetir.Text = "Personelleri Getir";
             this.btnPersonelGetir.UseVisualStyleBackColor = true;
+            this.btnPersonelGetir.Click += new System.EventHandler(this.btnPersonelGetir_Click);
             // 
             // btnMaasHesaplat
             // 

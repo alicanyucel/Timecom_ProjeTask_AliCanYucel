@@ -66,7 +66,8 @@ namespace Timecom_ProjeTask_AliCanYucel
 
         private void Firmalar_Load(object sender, EventArgs e)
         {
-            verileriGetir();
+           // listele butonuna tıklayıncanak gelecek
+           // diğer turlu pek bir işlevi yok
         }
 
        public void griddoldur()
