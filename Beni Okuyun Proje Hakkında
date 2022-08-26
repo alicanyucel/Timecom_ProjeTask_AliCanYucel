@@ -1,0 +1,5 @@
+Öncellikle Ana Ekran (Firmalar) Ekranı Var.
+En Sağ Ustteki Checkboxtaki Personel Yazısına Tıklayınca Personeller Formu Açılıyor.
+Personeller Formundan da Hesaplamalar ve Ana Forma Dönebiliyoruz.Anasayfa ve Geri Gel Buonlarını Görebilirsiniz.
+Maaslar Formundada Sadece Hesaplamlar Alanını Yapamadım.
+Projenin Database Kısmı da Mssql Dosyası Var.
