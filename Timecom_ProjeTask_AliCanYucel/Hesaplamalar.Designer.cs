@@ -47,7 +47,7 @@
             this.txtHaftaSonu = new System.Windows.Forms.TextBox();
             this.txtBayramGunu = new System.Windows.Forms.TextBox();
             this.txtResmiTatilGunu = new System.Windows.Forms.TextBox();
-            this.txtIzınGunu = new System.Windows.Forms.TextBox();
+            this.txtIzinGunu = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgHesaplamalar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -211,12 +211,12 @@
             this.txtResmiTatilGunu.Size = new System.Drawing.Size(100, 20);
             this.txtResmiTatilGunu.TabIndex = 17;
             // 
-            // txtIzınGunu
+            // txtIzinGunu
             // 
-            this.txtIzınGunu.Location = new System.Drawing.Point(117, 237);
-            this.txtIzınGunu.Name = "txtIzınGunu";
-            this.txtIzınGunu.Size = new System.Drawing.Size(100, 20);
-            this.txtIzınGunu.TabIndex = 18;
+            this.txtIzinGunu.Location = new System.Drawing.Point(117, 237);
+            this.txtIzinGunu.Name = "txtIzinGunu";
+            this.txtIzinGunu.Size = new System.Drawing.Size(100, 20);
+            this.txtIzinGunu.TabIndex = 18;
             // 
             // Hesaplamalar
             // 
@@ -225,7 +225,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtIzınGunu);
+            this.Controls.Add(this.txtIzinGunu);
             this.Controls.Add(this.txtResmiTatilGunu);
             this.Controls.Add(this.txtBayramGunu);
             this.Controls.Add(this.txtHaftaSonu);
@@ -273,6 +273,6 @@
         private System.Windows.Forms.TextBox txtHaftaSonu;
         private System.Windows.Forms.TextBox txtBayramGunu;
         private System.Windows.Forms.TextBox txtResmiTatilGunu;
-        private System.Windows.Forms.TextBox txtIzınGunu;
+        private System.Windows.Forms.TextBox txtIzinGunu;
     }
 }

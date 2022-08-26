@@ -153,9 +153,9 @@ namespace Timecom_ProjeTask_AliCanYucel
                 bayramgunu =int.Parse( txtBayramGunu.Text);
                 gelirvergisi = 15; // yuzde 15 gelir vergisi
                 haftasonu =int.Parse( txtHaftaSonu.Text);
-                izingunu =int.Parse( txtIzınGunu.Text);
+                izingunu =int.Parse( txtIzinGunu.Text);
                 resmitatil =int.Parse(txtResmiTatilGunu.Text);
-                 bes = 3; // yuzde 3 ü bese kesilecek
+                 bes = 3; // yuzde 3 ü bese kesileceK
                 netucret = 5500; // 2022 yılı asgari ilk donem ücreti
                 baglanti.Open();
                 string kayit = "insert into Maaslar (NormalGun,HaftaSonu,BayramGunu,ResmiTatilGunu,IzinGunu,GelirVergisi,Bes,NetUcret) values (@NormalGun,@HaftaSonu,@BayramGunu,@ResmiTatilGunu,@IzınGunu,@GelirVergisi,@Bes,@NetUcretİ)";
