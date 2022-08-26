@@ -187,13 +187,13 @@ namespace Timecom_ProjeTask_AliCanYucel
             cinsiyeti = cbxCinsiyet.SelectedItem.ToString();
             isebaslamatarihi = (string)txtIseBaslamaTarihi.Text;
             engellilik = cbxEngellilikDurumu.SelectedItem.ToString();
-            calismadurumu = cbxEngellilikDurumu.SelectedItem.ToString();
+            calismadurumu = cbxCalismaSekli.SelectedItem.ToString();
             ucretdonemi = cbxUcreti.SelectedItem.ToString();
                 if (id != "")
             {
                 string sql = "UPDATE Personeller set " +
                  "PersonelKodu='" + personelkodu + "', Adi='" + adi + "',Soyadi='" + soyadi + "'," +
-                "TcNo='" + tcno  + "' WHERE PersonelId=" + id;
+                "TcNo='" + tcno +"',Cinsiyeti='"+ cinsiyeti + "',IseBaslamaTarihi='" +isebaslamatarihi +"',EngellilikDurumu='" + engellilik + "' ,CalismaSekli='" + calismadurumu+"',Ucreti='" + ucretdonemi + "' WHERE PersonelId=" + id;
                 SQLCalistir(sql, "Düzeltme");
                 verileriGetir();
             }
