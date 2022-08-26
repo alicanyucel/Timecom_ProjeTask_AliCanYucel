@@ -96,7 +96,7 @@ namespace Timecom_ProjeTask_AliCanYucel
 
         }
 
-        private void btnYeniKayit_Click(object sender, EventArgs e)
+        public void btnYeniKayit_Click(object sender, EventArgs e)
         {
             try
             {
@@ -123,12 +123,12 @@ namespace Timecom_ProjeTask_AliCanYucel
             }
         }
 
-        private void cbxCinsiyet_SelectedIndexChanged(object sender, EventArgs e)
+        public void cbxCinsiyet_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void Personeller_Load(object sender, EventArgs e)
+        public void Personeller_Load(object sender, EventArgs e)
         {
             this.dtgPersoneller.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             // net maas hesapları yapılacak
@@ -176,11 +176,11 @@ namespace Timecom_ProjeTask_AliCanYucel
  
         }
 
-        private void btnPersonelDuzenle_Click(object sender, EventArgs e)
+        public void btnPersonelDuzenle_Click(object sender, EventArgs e)
         {
-            string id =txtPersonelId.Text;
-            string personelkodu, adi, soyadi,tcno,cinsiyeti,isebaslamatarihi,engellilik,calismadurumu,ucretdonemi;
-            personelkodu = txtPersonelKodu.Text;
+           string id =txtPersonelId.Text;
+           string personelkodu, adi, soyadi,tcno,cinsiyeti,isebaslamatarihi,engellilik,calismadurumu,ucretdonemi;
+           personelkodu = txtPersonelKodu.Text;
             adi = txtPersonelAd.Text;
             soyadi = txtPersonelSoyad.Text;
             tcno = txtPersonelTcNo.Text;
@@ -209,7 +209,7 @@ namespace Timecom_ProjeTask_AliCanYucel
 
         }
 
-        private void dtgPersoneller_CellClick(object sender, DataGridViewCellEventArgs e)
+        public void dtgPersoneller_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int secilenIndeks = dtgPersoneller.SelectedCells[0].RowIndex;
             DataGridViewRow secilenSatir = dtgPersoneller.Rows[secilenIndeks];

@@ -146,16 +146,16 @@ namespace Timecom_ProjeTask_AliCanYucel
 
             try
             {
-        SqlConnection baglanti = new SqlConnection("Data Source =DESKTOP-ROTCU0Q; Initial Catalog =Timecom; Integrated Security = True");
+                SqlConnection baglanti = new SqlConnection("Data Source =DESKTOP-ROTCU0Q; Initial Catalog =Timecom; Integrated Security = True");
                 int normalgun, haftasonu, izingunu, bayramgunu, resmitatil;
-                decimal bes, netucret,gelirvergisi;
+                decimal bes, netucret, gelirvergisi;
                 normalgun = int.Parse(txtNormalGun.Text);
-                bayramgunu =int.Parse( txtBayramGunu.Text);
+                bayramgunu = int.Parse(txtBayramGunu.Text);
                 gelirvergisi = 15; // yuzde 15 gelir vergisi
-                haftasonu =int.Parse( txtHaftaSonu.Text);
-                izingunu =int.Parse( txtIzinGunu.Text);
-                resmitatil =int.Parse(txtResmiTatilGunu.Text);
-                 bes = 3; // yuzde 3 ü bese kesileceK
+                haftasonu = int.Parse(txtHaftaSonu.Text);
+                izingunu = int.Parse(txtIzinGunu.Text);
+                resmitatil = int.Parse(txtResmiTatilGunu.Text);
+                bes = 3; // yuzde 3 ü bese kesileceK
                 netucret = 5500; // 2022 yılı asgari ilk donem ücreti
                 baglanti.Open();
                 string kayit = "insert into Maaslar (NormalGun,HaftaSonu,BayramGunu,ResmiTatilGunu,IzinGunu,GelirVergisi,Bes,NetUcret) values (@NormalGun,@HaftaSonu,@BayramGunu,@ResmiTatilGunu,@IzınGunu,@GelirVergisi,@Bes,@NetUcretİ)";
@@ -169,7 +169,35 @@ namespace Timecom_ProjeTask_AliCanYucel
                 ekle.Parameters.AddWithValue("@Bes", bes);
                 ekle.Parameters.AddWithValue("@NetUcreti", netucret);
                 ekle.ExecuteNonQuery();
-            verileriGetir();
+                //
+                // net maaşı hesaplıyoruz 
+                // öncellikle personeller tablosundan istenilen verileri çekmek lazım
+                decimal beshesapla = 0; // ucretin yuzde 3 ü
+                decimal vergihesapla = 0; // ucretin yuzde 15 i
+                decimal gunlukucret = 0;
+                int normalcailismasuresi = 0;
+                normalcailismasuresi = (30 - haftasonu - resmitatil - bayramgunu - izingunu - resmitatil);
+                string calismasekli;
+                string ucreti;
+                SqlCommand kmt2 = new SqlCommand("select Ucreti,CalismaSekli from Personeller ", baglanti);
+                SqlDataReader oku = kmt2.ExecuteReader();
+                while (oku.Read())
+                {
+                    calismasekli = oku["CalismaSekli"].ToString();
+                    ucreti = oku["Ucreti"].ToString();
+                    decimal ucrt = decimal.Parse(ucreti);
+                    MessageBox.Show(calismasekli);
+                    MessageBox.Show(ucrt.ToString());
+                    break;
+                    gunlukucret = ucrt / 30;
+                    vergihesapla = ucrt * (15 / 100);
+                    beshesapla = ucrt * (3 / 100);
+                    netucret = (normalcailismasuresi * gunlukucret) - vergihesapla - beshesapla;
+                    MessageBox.Show(netucret.ToString());
+
+                }
+                // buradan verileri aldık şimdi bes ve net maaş hesaplamalarını yapabilİRİZ
+                verileriGetir();
                 griddoldur();
             }
             catch (Exception ex)
@@ -182,7 +210,8 @@ namespace Timecom_ProjeTask_AliCanYucel
         private void btnMaasHesaplat_Click(object sender, EventArgs e)
         {
             // öncellikle maşalar tablosunu dolduralım
-
+            Personeller prs = new Personeller();
+            // buradan personeller tablosundaki veriler alınacak değerlere atanacak sonra net maaş hesabı yapılacak
             MaasKaydet();
         
 
