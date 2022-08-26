@@ -130,5 +130,10 @@ namespace Timecom_ProjeTask_AliCanYucel
         {
 
         }
+
+        private void btnMaasHesaplat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

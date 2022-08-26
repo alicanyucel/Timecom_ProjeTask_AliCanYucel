@@ -78,6 +78,7 @@
             this.btnMaasHesaplat.TabIndex = 2;
             this.btnMaasHesaplat.Text = "Maaş Hesaplat";
             this.btnMaasHesaplat.UseVisualStyleBackColor = true;
+            this.btnMaasHesaplat.Click += new System.EventHandler(this.btnMaasHesaplat_Click);
             // 
             // btnSil
             // 
@@ -169,10 +170,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(21, 26);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(685, 13);
+            this.label7.Size = new System.Drawing.Size(264, 13);
             this.label7.TabIndex = 12;
-            this.label7.Text = "Gelir Verigisi Yüzde 15 alıncak Bes ise yüzde 3 AlıncakMaaş Dönemsel Olarak seçil" +
-    "ecek 2021 yılı için 4250 2022 yılı için ise 5500 olarak alıyorum";
+            this.label7.Text = "Gelir Verigisi Yüzde 15 alıncak Bes ise yüzde 3 Alıncak";
             // 
             // label8
             // 
