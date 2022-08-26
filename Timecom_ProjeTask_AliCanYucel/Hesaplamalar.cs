@@ -90,20 +90,30 @@ namespace Timecom_ProjeTask_AliCanYucel
                     SQLCalistir(sqlpersonelsil, "Silme");
                 else
                     MessageBox.Show("Silincek Personel Verileri Bulunamadi");
-                if(maassil!=null)
-                SQLCalistir(maassil, "silme");
+                if (maassil != null)
+                    SQLCalistir(maassil, "silme");
                 else
                     MessageBox.Show("Maas Tablosunda Silincek Verileriniz Yok");
                 verileriGetir();
             }
-        } 
+        }
+        public void griddoldur()
+        {
+            SqlConnection con = new SqlConnection("server=DESKTOP-ROTCU0Q; Initial Catalog=Timecom;Integrated Security=True");
+            SqlDataAdapter da = new SqlDataAdapter("Select * From Maaslar", con);
+            DataSet ds = new DataSet();
+            con.Open();
+            da.Fill(ds, "maaslar");
+            dtgHesaplamalar.DataSource = ds.Tables["Maaslar"];
+            con.Close();
+        }
         // 
-       // maaslar tablosu doldurulacak veriler kullanıcıdan alınacak
+        // maaslar tablosu doldurulacak veriler kullanıcıdan alınacak
 
         private void Hesaplamalar_Load(object sender, EventArgs e)
         {
-            
-           
+
+
 
         }
 
@@ -117,13 +127,13 @@ namespace Timecom_ProjeTask_AliCanYucel
         private void btnPersonelGetir_Click(object sender, EventArgs e)
         {
             // iki ablonun tek gridde gozukmesi için personller ve maaşalr tablosu full joinle birleştirilecek
-            verileriGetir();    
+            verileriGetir();
 
         }
 
         private void dtgHesaplamalar_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -131,8 +141,50 @@ namespace Timecom_ProjeTask_AliCanYucel
 
         }
 
+        public void MaasKaydet()
+        {
+
+            try
+            {
+        SqlConnection baglanti = new SqlConnection("Data Source =DESKTOP-ROTCU0Q; Initial Catalog =Timecom; Integrated Security = True");
+                int normalgun, haftasonu, izingunu, bayramgunu, resmitatil;
+                decimal bes, netucret,gelirvergisi;
+                normalgun = int.Parse(txtNormalGun.Text);
+                bayramgunu =int.Parse( txtBayramGunu.Text);
+                gelirvergisi = 15; // yuzde 15 gelir vergisi
+                haftasonu =int.Parse( txtHaftaSonu.Text);
+                izingunu =int.Parse( txtIzınGunu.Text);
+                resmitatil =int.Parse(txtResmiTatilGunu.Text);
+                 bes = 3; // yuzde 3 ü bese kesilecek
+                netucret = 5500; // 2022 yılı asgari ilk donem ücreti
+                baglanti.Open();
+                string kayit = "insert into Maaslar (NormalGun,HaftaSonu,BayramGunu,ResmiTatilGunu,IzinGunu,GelirVergisi,Bes,NetUcret) values (@NormalGun,@HaftaSonu,@BayramGunu,@ResmiTatilGunu,@IzınGunu,@GelirVergisi,@Bes,@NetUcretİ)";
+                SqlCommand ekle = new SqlCommand(kayit, baglanti);
+                ekle.Parameters.AddWithValue("@NormalGun", normalgun);
+                ekle.Parameters.AddWithValue("@HaftaSonu", haftasonu);
+                ekle.Parameters.AddWithValue("@BayramGunu", bayramgunu);
+                ekle.Parameters.AddWithValue("@ResmiTatilGunu", resmitatil);
+                ekle.Parameters.AddWithValue("@IzınGunu", izingunu);
+                ekle.Parameters.AddWithValue("@GelirVergisi", gelirvergisi);
+                ekle.Parameters.AddWithValue("@Bes", bes);
+                ekle.Parameters.AddWithValue("@NetUcreti", netucret);
+                ekle.ExecuteNonQuery();
+            verileriGetir();
+                griddoldur();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+            baglanti.Close();
+        }
+    
         private void btnMaasHesaplat_Click(object sender, EventArgs e)
         {
+            // öncellikle maşalar tablosunu dolduralım
+
+            MaasKaydet();
+        
 
         }
     }
