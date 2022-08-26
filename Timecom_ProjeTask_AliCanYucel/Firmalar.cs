@@ -66,6 +66,7 @@ namespace Timecom_ProjeTask_AliCanYucel
 
         private void Firmalar_Load(object sender, EventArgs e)
         {
+            cbxFirmalar.Items.Add("Faaliyette olanlar");
            // listele butonuna tıklayıncanak gelecek
            // diğer turlu pek bir işlevi yok
         }
@@ -247,6 +248,12 @@ namespace Timecom_ProjeTask_AliCanYucel
             txtFirmaAdiSoyadi.Text = Convert.ToString(secilenSatir.Cells["FirmaAdi"].Value);
             
 
+        }
+
+        private void cbxFirmalar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbxFirmalar.Items.Add("Faaliyette olanlar");
+            verileriGetir();
         }
     }
     }

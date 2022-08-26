@@ -1009,6 +1009,7 @@
             this.cbxFirmalar.Name = "cbxFirmalar";
             this.cbxFirmalar.Size = new System.Drawing.Size(128, 21);
             this.cbxFirmalar.TabIndex = 91;
+            this.cbxFirmalar.SelectedIndexChanged += new System.EventHandler(this.cbxFirmalar_SelectedIndexChanged);
             // 
             // btnX
             // 
